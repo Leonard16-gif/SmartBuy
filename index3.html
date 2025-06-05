@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Mini Market</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    footer {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .contact-info {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+  </style>
+  <script>
+    function changeLanguage(lang) {
+      document.querySelectorAll("[data-lang]").forEach(el => el.style.display = "none");
+      document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => el.style.display = "block");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      changeLanguage("en");
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Mini Market</h1>
+    <select onchange="changeLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="rw">Kinyarwanda</option>
+      <option value="fr">Français</option>
+    </select>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section>
+    <div class="contact-info" data-lang="en">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:minimarket@example.com">minimarket@example.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/250788000000" target="_blank">+250 788 000 000</a></p>
+      <p>We are here to assist you in selling, renting, or buying any of the listed items with ease.</p>
+    </div>
+
+    <div class="contact-info hidden" data-lang="rw">
+      <h2>Twandikire</h2>
+      <p>Email: <a href="mailto:minimarket@example.com">minimarket@example.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/250788000000" target="_blank">+250 788 000 000</a></p>
+      <p>Turahari ngo tugufashe kugurisha, gukodesha cyangwa kugura ibintu byashyizwe kuri urubuga.</p>
+    </div>
+
+    <div class="contact-info hidden" data-lang="fr">
+      <h2>Contactez-nous</h2>
+      <p>Email : <a href="mailto:minimarket@example.com">minimarket@example.com</a></p>
+      <p>WhatsApp : <a href="https://wa.me/250788000000" target="_blank">+250 788 000 000</a></p>
+      <p>Nous sommes là pour vous aider à vendre, louer ou acheter facilement les produits listés.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mini Market. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
